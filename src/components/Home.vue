@@ -1,10 +1,5 @@
 <template>
   <v-container v-if="times" grid-list-md text-xs-center fluid>
-    <v-text-field
-        xs12 sm6
-        v-model="stop"
-        label="Arrêt"
-      ></v-text-field>
     <v-layout row wrap>
       <v-flex v-for="(time, i) in times.filter( item => { return this.filter ? item.ligne.numLigne == this.filter : true})" :key="i" xs12 sm6 md4 lg3 @click="changeFilter(time.ligne.numLigne)" style="cursor: pointer;">
         <v-card :color="time.sens == '1' ? 'teal darken-1' : 'light-blue accent-4'">
@@ -40,16 +35,9 @@ export default {
       }
     }
   },
-  onChange() {
-    axios
-      .get('http://192.168.0.25:3000/times?stop=' + this.stop)
-      .then(response => {
-        this.times = response.data
-      })
-  },
   created() {
     axios
-      .get('http://192.168.0.25:3000/times?stop=' + this.stop)
+      .get('http://192.168.0.25:3000/times')
       .then(response => {
         this.times = response.data
       })
