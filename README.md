@@ -1,21 +1,18 @@
-# tan-scanner
+# Tan Scanner
+
+Small Vue.js webapp retrieving public transports information in Nantes using TAN Open API.
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Start server
+```
+node server.js
+```
+
+## Local run
 ```
 npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
