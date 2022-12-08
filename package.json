@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "vue": "^2.5.17",
     "vuetify": "^1.0.19"
   },
